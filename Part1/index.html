@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tic Tac Toe</title>
-  <link rel="stylesheet" href="./index.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tic Tac Toe!</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
-
-<body>
-  <nav>
-    <h1>Tic Tac Toe Board!</h1>
-  </nav>
-  <main>
-    <table>
-      <tr class="row">
-        <td id="0" onclick="play(0)"></td>
-        <td id="1" onclick="play(1)"></td>
-        <td id="2" onclick="play(2)"></td>
-      </tr>
-      <tr class="row">
-        <td id="3" onclick="play(3)"></td>
-        <td id="4" onclick="play(4)"></td>
-        <td id="5" onclick="play(5)"></td>
-      </tr>
-      <tr class="row">
-        <td id="6" onclick="play(6)"></td>
-        <td id="7" onclick="play(7)"></td>
-        <td id="8" onclick="play(8)"></td>
-      </tr>
-    </table>
-    <span>Player </span>
-    <span id="player">X</span>
-    <span>'s turn</span>
-  </main>
+<body onload="startGame();">
+  <h1>Tic Tac Toe</h1>
+  <div id="message">Tic Tac Toe </div>
+  <table border="1">
+    <tr>
+      <td class="Square" id="s1" onClick="nextMove(this)"></td>
+      <td class="Square" id="s2" onClick="nextMove(this)"></td>
+      <td class="Square" id="s3" onClick="nextMove(this)"></td>
+    </tr>
+    <tr>
+      <td class="Square" id="s4" onClick="nextMove(this)"></td>
+      <td class="Square" id="s5" onClick="nextMove(this)"></td>
+      <td class="Square" id="s6" onClick="nextMove(this)"></td>
+    </tr>
+    <tr>
+      <td class="Square" id="s7" onClick="nextMove(this)"></td>
+      <td class="Square" id="s8" onClick="nextMove(this)"></td>
+      <td class="Square" id="s9" onClick="nextMove(this)"></td>
+    </tr>
+  </table>
+  <a href="javascript:startGame();" id="restart">New Game</a>
+  <script src="index.js"></script>
 </body>
-
 </html>
